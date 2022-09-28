@@ -1,0 +1,148 @@
+/* mobile screen  */
+
+.topnav-wrapper{
+    height: 80px;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.logo{
+    flex: 90%;
+    z-index: 100;
+    background-color: white;
+}
+
+.logo-image{
+    width: 250px;
+}
+
+.nav-caret{
+    background-color: white;
+    flex: 10%;
+    align-self: center;
+    z-index: 100;
+    font-size: 25px;
+}
+
+.nav-buttons{
+    position: absolute;
+    top: 80px;
+    z-index: 10;
+    flex: 100%;
+    text-transform: uppercase;
+    color: rgb(0,0,0,0.6);
+    height: 100vh - 80px;
+    background-color: white;
+    width: 100%;
+
+    font-size: 20px;
+    padding-top: 60px;
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.nav-button{
+    cursor: pointer;
+    transition: 0.3s linear;
+}
+
+.nav-button:hover{
+    transform: scale(110%);
+    color: rgb(0,0,0,0.8);
+}
+
+.contact-us-button{
+    transition: 0.3s linear;
+    color: white;
+    background: linear-gradient(yellow, rgb(255, 111, 0));
+    width: 150px;
+    padding: 5px;
+    border-radius: 8px;
+}
+
+.contact-us-button:hover{
+    cursor: pointer;
+    filter: brightness(90%);
+    transform: scale(115%);
+}
+
+.open{
+    animation: 0.5s slide-down linear;
+}
+
+.close{
+    transform: translateY(-100vh);
+    animation: 0.5s slide-up linear;
+    /* visibility: hidden; */
+}
+
+@keyframes slide-down {
+    from{
+        transform: translateY(-100vh);
+    }
+    to{
+        transform: translateY(0px);
+    }
+}
+
+@keyframes slide-up {
+    from{
+        transform: translateY(0px);
+    }
+    to{
+        transform: translateY(-100vh);
+    }
+}
+
+/* media query for desktop screen */
+@media (min-width: 768px) {
+    .topnav-wrapper{
+        height: 120px;
+        display: flex;
+    }
+    
+    .logo{
+        flex: 50%
+    }
+
+    .logo-image{
+        width: auto;
+    }
+
+    .nav-caret{
+        display: none;
+    }
+    
+    .nav-buttons{
+        flex: 50%;
+        display: flex;
+        flex-direction: row;
+        align-self: flex-end;
+        margin-bottom: 20px;
+        gap: 35px;
+        height: auto;
+        padding: 5px;
+        position: relative;
+        top: auto;
+    }
+    
+    .nav-button{
+        align-self: center;
+    }
+    
+    .contact-us-button{
+        padding: 10px;
+        border-radius: 15px;
+    }
+    .open{
+        animation: none;
+    }
+    
+    .close{
+        transform: none;
+        animation: none;
+    }
+}
