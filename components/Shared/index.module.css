@@ -1,0 +1,31 @@
+/* mobile */
+
+.button{
+    background: linear-gradient(to right, #fcdf00, #fc9300, #f95800);
+    color: white;
+    padding: 8px;
+    font-size: 8px;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    width: fit-content;
+    text-align: center;
+}
+
+.button:hover{
+    transform: scale(110%);
+    background: linear-gradient(to left, #fcdf00, #fc9300, #f95800);
+}
+
+/* desktop */
+@media (min-width: 768px) {
+    .button{
+        padding: 10px 12px;
+        font-size: 18px;
+        border-radius: 5px;
+        margin-top: 30px;
+        transition: 0.4s linear;
+        cursor: pointer;
+    }
+}

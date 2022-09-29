@@ -11,18 +11,20 @@
     flex: 90%;
     z-index: 100;
     background-color: white;
+    padding: 15px;
 }
 
 .logo-image{
-    width: 250px;
+    width: 160px;
 }
 
 .nav-caret{
     background-color: white;
     flex: 10%;
-    align-self: center;
+    align-self: flex-start;
+    margin-top: 20px;
     z-index: 100;
-    font-size: 25px;
+    font-size: 20px;
 }
 
 .nav-buttons{
@@ -32,9 +34,9 @@
     flex: 100%;
     text-transform: uppercase;
     color: rgb(0,0,0,0.6);
-    height: 100vh - 80px;
+    height: calc(100vh + 80px);
     background-color: white;
-    width: 100%;
+    width: 100vw;
 
     font-size: 20px;
     padding-top: 60px;
@@ -57,16 +59,18 @@
 .contact-us-button{
     transition: 0.3s linear;
     color: white;
-    background: linear-gradient(yellow, rgb(255, 111, 0));
-    width: 150px;
+    background: linear-gradient(to right, #fcdf00, #fc9300, #f95800);
+    width: fit-content;
     padding: 5px;
     border-radius: 8px;
+    text-align: center;
 }
 
 .contact-us-button:hover{
     cursor: pointer;
-    filter: brightness(90%);
+    /* filter: brightness(90%); */
     transform: scale(115%);
+    background: linear-gradient(to left, #fcdf00, #fc9300, #f95800);
 }
 
 .open{
@@ -74,7 +78,7 @@
 }
 
 .close{
-    transform: translateY(-100vh);
+    transform: translateY(calc( -100vh - 80px));
     animation: 0.5s slide-up linear;
     /* visibility: hidden; */
 }
@@ -97,19 +101,24 @@
     }
 }
 
+
 /* media query for desktop screen */
 @media (min-width: 768px) {
     .topnav-wrapper{
         height: 120px;
         display: flex;
+        flex-wrap: nowrap;
+        padding: 0px 120px 0px 95px;
     }
     
     .logo{
-        flex: 50%
+        flex: 30%;
+        align-self: flex-end;
     }
 
     .logo-image{
-        width: auto;
+        width: 300px;
+        
     }
 
     .nav-caret{
@@ -117,25 +126,31 @@
     }
     
     .nav-buttons{
-        flex: 50%;
+        flex: 70%;
         display: flex;
         flex-direction: row;
         align-self: flex-end;
+        align-items: flex-end;
+        justify-content: flex-end;
         margin-bottom: 20px;
         gap: 35px;
         height: auto;
-        padding: 5px;
+        padding: 10px;
         position: relative;
         top: auto;
+        font-size: 18px;
     }
     
     .nav-button{
         align-self: center;
+        
     }
     
     .contact-us-button{
-        padding: 10px;
-        border-radius: 15px;
+        padding: 7px;
+        border-radius: 7px;
+        font-size: 15px;
+        text-align: center;
     }
     .open{
         animation: none;
