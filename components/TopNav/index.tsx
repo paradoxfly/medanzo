@@ -2,10 +2,19 @@ import styles from './index.module.css'
 import { FaBars } from 'react-icons/fa'
 import { GrClose } from 'react-icons/gr'
 import classNames from 'classnames'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 export function TopNav(){
     const [ open, setOpen ] = useState(false)
+
+    useEffect(() => {
+        if(open){
+            document.body.style.overflowY = "hidden"
+        }
+        else{
+            document.body.style.overflowY = "scroll"
+        }
+    }, [open])
 
     return(
         <div className={styles['topnav-wrapper']}>
