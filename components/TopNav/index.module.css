@@ -43,12 +43,12 @@
     padding-left: 20px;
     display: flex;
     flex-direction: column;
-    gap: 25px;
 }
 
 .nav-button{
     cursor: pointer;
     transition: 0.3s linear;
+    margin-bottom: 25px;
 }
 
 .nav-button:hover{
@@ -143,7 +143,7 @@
     
     .nav-button{
         align-self: center;
-        
+        margin-bottom: auto;
     }
     
     .contact-us-button{
