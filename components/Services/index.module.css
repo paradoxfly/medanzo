@@ -1,0 +1,224 @@
+/* mobile screen  */
+
+.wrapper{
+    height: calc(100vh - 120px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0px;
+}
+
+.header{
+    color: #01698e;
+    font-weight: 100;
+    font-size: 45px;
+}
+
+.sub-header{
+    font-size: 8px;
+    color: #013345;
+}
+
+.sub-wrapper{
+    margin: 15px 0px;
+    display: flex;
+    flex-direction: column;
+    font-size: 9px;
+}
+
+.card-wrapper{
+    position: relative;
+    width: 220px;
+    height: 250px;
+    margin: 15px 0px;
+    /* border: 1px solid red; */
+}
+
+.orange-bg{
+    background-color: #fc9300;
+    height: 100%;
+    width: 70%;
+    position: absolute;
+    left: 15%;
+    border-radius: 15px;
+    z-index: 2;
+}
+
+.blue-bg{
+    background-color: #01698e;
+    height: 100%;
+    width: 70%;
+    position: absolute;
+    left: 15%;
+    border-radius: 15px;
+    z-index: 2;
+}
+
+.border{
+    position: absolute;
+    height: 70%;
+    width: 100%;
+    top: 15%;
+    border: 1px solid rgb(0,0,0,0.3);
+}
+
+.orange-border-top-left{
+    top: -2px;
+    left: -2px;
+    position: inherit;
+    height: 50%;
+    width: 50%;
+    border-top: 4px solid #fc9300;
+    border-left: 4px solid #fc9300;
+}
+
+.orange-border-bottom-right{
+    bottom: -2px;
+    right: -2px;
+    position: inherit;
+    height: 50%;
+    width: 50%;
+    border-bottom: 4px solid #fc9300;
+    border-right: 4px solid #fc9300;
+}
+
+.blue-border-top-left{
+    top: -2px;
+    left: -2px;
+    position: inherit;
+    height: 50%;
+    width: 50%;
+    border-top: 4px solid #01698e;
+    border-left: 4px solid #01698e;
+}
+
+.blue-border-bottom-right{
+    bottom: -2px;
+    right: -2px;
+    position: inherit;
+    height: 50%;
+    width: 50%;
+    border-bottom: 4px solid #01698e;
+    border-right: 4px solid #01698e;
+}
+
+.card{
+    background-color: white;
+    height: 90%;
+    width: 80%;
+    left: 10%;
+    top: 5%;
+    position: absolute;
+    z-index: 3;
+    /* border: 1px solid rgb(0,0,0,0.1); */
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 50px;
+    box-shadow: 6px 3px 2px rgb(0,0,0,0.1);
+}
+
+.footer-text{
+    font-size: 7px;
+    color: rgb(0,0,0,0.5);
+    font-style: italic;
+    margin: 10px auto;
+}
+
+.link{
+    cursor: pointer;
+    font-size: 8px;
+    font-weight: 600;
+}
+
+/* desktop screen  */
+@media (min-width: 768px) {
+    .wrapper{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 30px 0px 10px;
+    }
+    
+    .header{
+        font-weight: 100;
+        font-size: 68px;
+    }
+    
+    .sub-header{
+        font-size: 13px;
+    }
+    
+    .sub-wrapper{
+        margin: 65px 0px;
+        flex-direction: row;
+        font-size: 13px;
+    }
+    
+    .card-wrapper{
+        width: 360px;
+        height: 380px;
+        margin: 15px 60px;
+    }
+    
+    .orange-bg{
+        border-radius: 19px;
+    }
+    
+    .blue-bg{
+        border-radius: 15px;
+    }
+    
+    .border{
+        border: 2px solid rgb(0,0,0,0.3);
+    }
+    
+    .orange-border-top-left{
+        top: -4px;
+        left: -4px;
+        border-top: 7px solid #fc9300;
+        border-left: 7px solid #fc9300;
+    }
+    
+    .orange-border-bottom-right{
+        bottom: -4px;
+        right: -4px;
+        border-bottom: 7px solid #fc9300;
+        border-right: 7px solid #fc9300;
+    }
+    
+    .blue-border-top-left{
+        top: -4px;
+        left: -4px;
+        border-top: 7px solid #01698e;
+        border-left: 7px solid #01698e;
+    }
+    
+    .blue-border-bottom-right{
+        bottom: -4px;
+        right: -4px;
+        border-bottom: 7px solid #01698e;
+        border-right: 7px solid #01698e;
+    }
+    
+    .card{
+        padding-top: 90px;
+        box-shadow: 9px 6px 5px rgb(0,0,0,0.1);
+    }
+    
+    .footer-text{
+        font-size: 15px;
+        font-style: italic;
+        margin: 10px auto;
+    }
+    
+    .link{
+        font-size: 17px;
+    }
+
+    .link:hover{
+        color: rgb(19, 97, 97);
+        text-decoration: underline;
+    }
+}

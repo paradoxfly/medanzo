@@ -1,7 +1,7 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
-import { SectionOne, SectionThree, SectionTwo, TopNav } from '../components'
+import { SectionOne, SectionThree, SectionTwo, Services, TopNav } from '../components'
 import styles from '../styles/Home.module.css'
 
 const Home: NextPage = () => {
@@ -11,6 +11,7 @@ const Home: NextPage = () => {
       <SectionOne />
       <SectionTwo />
       <SectionThree />
+      <Services />
     </div>
   )
 }
